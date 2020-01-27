@@ -6,7 +6,9 @@ Making a face recognition system by using AWS Rekognition API
 - Backend
 - Database storage
 
+## Frontend
 
+[!Apache](Apache.png)
 
 Permission:
 sudo chown -R ubuntu:ubuntu .
