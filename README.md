@@ -12,8 +12,15 @@ Let's start with Frontend
 - Attach to VPC and Public Subnet
 - Security Group: TCP 22 from your IP, HTTP 80, Custom TCP 5000
 - Connect to EC2 instance
-``ssh -i "<your_keypair.pem>" ubuntu@<PublicIPadress_of_frontend``
-[!Apache](Apache.png)
+``ssh -i "<your_keypair.pem>" ubuntu@<PublicIPaddress_of_EC2``
+- Installation of Apache server
+``apt-get update
+sudo apt install apache2
+sudo ufw allow 'Apache'
+sudo ufw status
+sudo systemctl status apache2``
+- You should see picture as below if it is properly installed:
+![Apache](Apache.png)
 
 Permission:
 sudo chown -R ubuntu:ubuntu .
@@ -27,6 +34,6 @@ for anaconda 2 :
 ``export PATH=~/anaconda2/bin:$PATH``
 
 for anaconda 3 :
-``xport PATH=~/anaconda3/bin:$PATH``
+``export PATH=~/anaconda3/bin:$PATH``
 
 # Suggest as attendance check at University
