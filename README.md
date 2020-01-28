@@ -84,5 +84,5 @@ python my_rek_app.py
 - Go to your Frontend page
 
 ## Voila!
-Similarity is 99.72%. AgeRage is a bit wide. Emotion is calm!
+Similarity is 99.72%. AgeRange is a bit wide. Emotion is calm!
 ![calm](calm.png)
