@@ -25,6 +25,7 @@ Let's start with Frontend
 - You should see picture as below if it is properly installed:
 ![Apache](Apache.png)
 - Copy files from repository including index.html and Static folder to EC2 instance's folder /var/www/html/. In my case, I used WinSCP to copy  files
+
 ![WinSCP](WinSCP.png)
 - Allow browser to execute your webcam visiting link: *chrome://flags/#unsafely-treat-insecure-origin-as-secure*, paste your Public IP and click on button *enabled*
 
