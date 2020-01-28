@@ -4,7 +4,7 @@ Making a face recognition system by using AWS Rekognition API
 ## In this project we are going to deploy 3 servers on AWS Cloud:
 - Frontend on Apache web server
 - Backend using flask package
-- Database storage
+- S3 storage
 
 Let's start with Frontend
 ## Frontend
@@ -31,9 +31,6 @@ Let's start with Frontend
 ![WinSCP](WinSCP.png)
 - Allow browser to execute your webcam visiting link: *chrome://flags/#unsafely-treat-insecure-origin-as-secure*, paste your Public IP and click on button *enabled*
 
-
-Permission:
-sudo chown -R ubuntu:ubuntu .
 
 ## Backend
 - EC2 instance: Ubuntu free tier
@@ -84,5 +81,8 @@ python my_rek_app.py
 
 ## Almost final
 - In the index.js file, change the IP adress to the Public IP of your backend machine
+- Go to your Frontend page
 
 ## Voila!
+Similarity is 99.72%. Emotion is calm!
+![calm](calm.png)
