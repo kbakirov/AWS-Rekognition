@@ -23,7 +23,9 @@ Let's start with Frontend
  ```
 - Go to your EC2 instance using Public IP on browser
 - You should see picture as below if it is properly installed:
+
 ![Apache](apache_default_page.png)
+
 - Copy files from repository including index.html and Static folder to EC2 instance's folder /var/www/html/. In my case, I used WinSCP to copy  files
 
 ![WinSCP](WinSCP.png)
@@ -33,15 +35,54 @@ Let's start with Frontend
 Permission:
 sudo chown -R ubuntu:ubuntu .
 
+## Backend
+- EC2 instance: Ubuntu free tier
+- Attach to VPC and Public Subnet
+- Security Group: allow TCP 22 from your IP, Custom TCP 5000
+- Connect to EC2 instance: ``ssh -i "<your_keypair.pem>" ubuntu@<PublicIPadress_of_backend>``
+- Update and install Anaconda and create a virtual flask environment:
+```
+sudo apt-get update
+wget https://repo.anaconda.com/archive/Anaconda3-2019.03-Linux-x86_64.sh
+exit
+conda create -n my_flask_env python=3.6
+conda activate my_flask_env
+pip install Flask
+pip install flask_cors
+pip install boto3
+pip install flask_cors
+```
+- Setup AWS credentials for boto3:
+```
+mkdir ~/.aws
+nano ~/.aws/credentials
+```
+- Copy your credentials from Vocareum
+```
+[default]
+aws_access_key_id=...
+aws_secret_access_key=...
+aws_session_token=...
+```
+```
+nano ~/.aws/config
+```
+- should look like this:
+```
+[default]
+region = us-east-1
+```
+- Run Flask
+```
+python my_rek_app.py
+```
 
+## S3 storage
+- S3 services on AWS
+- Create a bucket (find unique name)
+- Security open for public
 
-Backend
-you might want to try this:
+## Almost final
+- In the index.js file, change the IP adress to the Public IP of your backend machine
 
-for anaconda 2 :
-``export PATH=~/anaconda2/bin:$PATH``
-
-for anaconda 3 :
-``export PATH=~/anaconda3/bin:$PATH``
-
-# Suggest as attendance check at University
+## Voila!
