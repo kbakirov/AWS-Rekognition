@@ -8,6 +8,11 @@ Making a face recognition system by using AWS Rekognition API
 
 Let's start with Frontend
 ## Frontend
+- EC2 instance: Ubuntu free tier
+- Attach to VPC and Public Subnet
+- Security Group: TCP 22 from your IP, HTTP 80, Custom TCP 5000
+- Connect to EC2 instance
+``ssh -i "<your_keypair.pem>" ubuntu@<PublicIPadress_of_frontend``
 [!Apache](Apache.png)
 
 Permission:
