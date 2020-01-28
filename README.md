@@ -13,14 +13,12 @@ Let's start with Frontend
 - Security Group: TCP 22 from your IP, HTTP 80, Custom TCP 5000
 - Connect to EC2 instance
 ``ssh -i "<your_keypair.pem>" ubuntu@<PublicIPaddress_of_EC2``
-- Installation of Apache server
- ```
- apt-get update
- sudo apt install apache2
- sudo ufw allow 'Apache'
- sudo ufw status
- sudo systemctl status apache2
- ```
+- Installation of Apache server:
+ ``apt-get update``
+ ``sudo apt install apache2``
+ ``sudo ufw allow 'Apache'``
+ ``sudo ufw status``
+ ``sudo systemctl status apache2``
 - Go to your EC2 instance using Public IP on browser
 - You should see picture as below if it is properly installed:
 ![Apache](Apache.png)
