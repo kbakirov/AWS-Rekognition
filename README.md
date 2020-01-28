@@ -23,7 +23,7 @@ Let's start with Frontend
  ```
 - Go to your EC2 instance using Public IP on browser
 - You should see picture as below if it is properly installed:
-![Apache](Apache.png)
+![Apache](apache_default_page.png)
 - Copy files from repository including index.html and Static folder to EC2 instance's folder /var/www/html/. In my case, I used WinSCP to copy  files
 
 ![WinSCP](WinSCP.png)
