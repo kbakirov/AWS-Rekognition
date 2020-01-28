@@ -14,11 +14,11 @@ Let's start with Frontend
 - Connect to EC2 instance
 ``ssh -i "<your_keypair.pem>" ubuntu@<PublicIPaddress_of_EC2``
 - Installation of Apache server
-`apt-get update
-sudo apt install apache2
-sudo ufw allow 'Apache'
-sudo ufw status
-sudo systemctl status apache2`
+`apt-get update`
+`sudo apt install apache2`
+`sudo ufw allow 'Apache'``
+`sudo ufw status`
+`sudo systemctl status apache2`
 - You should see picture as below if it is properly installed:
 ![Apache](Apache.png)
 
