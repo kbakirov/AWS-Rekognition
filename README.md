@@ -3,11 +3,11 @@ Making a face recognition system by using AWS Rekognition API
 
 ## In this project we are going to deploy 3 servers on AWS Cloud:
 - Frontend on Apache web server
-- Backend
+- Backend using flask package
 - Database storage
 
+Let's start with Frontend
 ## Frontend
-
 [!Apache](Apache.png)
 
 Permission:
